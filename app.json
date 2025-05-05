@@ -1,42 +1,40 @@
 {
   "expo": {
-    "name": "App-Rotina-Autoamor",
-    "slug": "App-Rotina-Autoamor",
+    "name": "RotinaAutoamor",
+    "slug": "RotinaAutoamor",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "approtinaautoamor",
-    "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFF0F5"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#FFF0F5"
       },
-      "edgeToEdgeEnabled": true
+      "package": "com.yourcompany.rotinaautoamor"
     },
     "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/icon.png"
     },
     "plugins": [
-      "expo-router",
       [
-        "expo-splash-screen",
+        "expo-image-picker",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "photosPermission": "O aplicativo precisa acessar suas fotos para adicionar imagens às suas tarefas."
         }
       ]
     ],
-    "experiments": {
-      "typedRoutes": true
-    }
+    "scheme": "rotinaautoamor"
   }
 }

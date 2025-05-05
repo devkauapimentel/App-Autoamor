@@ -1,20 +1,20 @@
 import React from 'react';
-import { StyleSheet, View, StatusBar } from 'react-native';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import FontLoader from '../components/FontLoader';
+import { View, StatusBar } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Board from '../components/Board';
 import { Colors } from '../constants/theme';
+import { StyleSheet } from 'react-native';
+import BottomNavigation from '../components/BottomNavigation';
 
-export default function App() {
+export default function HomeScreen() {
     return (
-        <FontLoader>
-            <SafeAreaProvider>
-                <SafeAreaView style={styles.container}>
-                    <StatusBar backgroundColor={Colors.background} barStyle="dark-content" />
-                    <Board />
-                </SafeAreaView>
-            </SafeAreaProvider>
-        </FontLoader>
+        <View style={styles.container}>
+            <StatusBar backgroundColor={Colors.background} barStyle="dark-content" />
+            <SafeAreaView style={styles.safeArea} edges={['top']}>
+                <Board />
+            </SafeAreaView>
+            <BottomNavigation />
+        </View>
     );
 }
 
@@ -22,5 +22,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Colors.background,
+    },
+    safeArea: {
+        flex: 1,
     },
 });

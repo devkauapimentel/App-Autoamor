@@ -22,7 +22,10 @@
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FFF0F5"
       },
-      "package": "com.yourcompany.rotinaautoamor"
+      "package": "com.yourcompany.rotinaautoamor",
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
       "favicon": "./assets/icon.png"
@@ -35,6 +38,11 @@
         }
       ]
     ],
-    "scheme": "rotinaautoamor"
+    "scheme": "rotinaautoamor",
+    "extra": {
+      "eas": {
+        "projectId": "f7b2adb0-2d79-46f6-81a5-c975fedc42ef"
+      }
+    }
   }
 }
